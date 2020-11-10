@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*  #D0B8AC ,#B3B6B7,#080705, #40434E */
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color:#FBFEFB;
+  line-height: 1.6;
+}
+
+#showcase{
+  background-image: url('../images/background\ image\ \(landing\).jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#showcase h1{
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+#showcase p{
+  font-size: 20px;
+}
+
+#showcase .button{
+  font-size: 18px;
+  text-decoration: none;
+  color: #FBFEFB;
+  border: #B3B6B7 2px solid;
+  padding: 10px 20px;
+  border-radius: 15px;
+  justify-content: space-between;
+}
+
+#showcase .button:hover{
+  background: #B3B6B7 ;
+  color: #FBFEFB;
+
+}
+
+/* all style */
+/* *{ */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* line-height: 1.5rem; */
+  /* background: #F7F9F9; */
+/* } */
+/* h1{ */
+  /* color: #2D3142; */
+/* } */
+
+ /* p{ */
+   /* color: #ADACB5; */
+ /* } */
+
+ /* .bar{ */
+   /* color: #669BBC; << banner */
+ /* } */
+
+
+
+
