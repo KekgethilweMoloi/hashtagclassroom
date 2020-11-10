@@ -1,18 +1,85 @@
 *{
   margin: 0;
   padding: 0;
-}
-
-/*  #D0B8AC ,#B3B6B7,#080705, #40434E */
-
-body{
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   color:#FBFEFB;
   line-height: 1.6;
 }
 
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color:#D0B8AC;
+  line-height: 1.6;
+}
+
+/*  #D0B8AC ,#B3B6B7,#080705, #40434E */
+/* navbar */
+.navbar{
+  background-color: #40434E;
+  overflow: hidden;
+  height: 63px;
+}
+
+.navbar a{
+  float: left;
+  display: block;
+  color: #B3B6B7;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar ul{
+  margin: 8px 0 ;
+  list-style: none;
+}
+
+.navbar a:hover{
+  background-color: #D0B8AC;
+  color: #FBFEFB;
+}
+
+/* side-nav */
+.side-nav{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#080705;
+  opacity: 0.9;
+  overflow-x:hidden; 
+  padding-top: 60px;
+  transition: 0.4s;
+}
+
+.side-nav a{
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #B3B6B7;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav a:hover{
+  color: #FBFEFB;
+}
+
+.side-nav .btnClose{
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 60px;
+
+}
+
+/* landing page */
 #showcase{
   background-image: url('../images/background\ image\ \(landing\).jpeg');
   background-size: cover;
@@ -50,6 +117,54 @@ body{
   color: #FBFEFB;
 
 }
+
+@media(max-width:500px){
+  .navbar-nav{display: none;}
+}
+
+/* login and signup */
+#login{
+  background-image: url('../images/background\ image\ \(landing\).jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+
+}
+
+input{
+  display: block;
+  width: 320px;
+  height: 50px;
+  background: #08070591;
+  outline: #B3B6B7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#login .button{
+  font-size: 18px;
+  text-decoration: none;
+  color: #FBFEFB;
+  border: #B3B6B7 2px solid;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+#login .button:hover{
+  background: #B3B6B7 ;
+  color: #FBFEFB;
+
+}
+
 
 /* all style */
 /* *{ */

@@ -13,7 +13,7 @@
   <!--side menu-->
   <nav class="navbar">
     <span class="open-slide">
-      <a href="#">
+      <a href="#" onclick="openSlideMenu()">
         <svg width="30" height="30">
           <path d="M0,5 30,5" stroke="#B3B6B7" stroke-width="5" />
           <path d="M0,14 30,14" stroke="#B3B6B7" stroke-width="5" />
@@ -22,54 +22,42 @@
       </a>
     </span>
     <ul class="navbar-nav">
-      <li><a href="Home.html"></a>Home</li>
-      <li><a href="Settings.html"></a>Settings</li>
-      <li><a href="#"></a>Contact us</li>
-      <li><a href="#"></a>Search</li>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Settings.html">Settings</a></li> 
     </ul>
   </nav>
+
   <div id="side-menu" class="side-nav">
-    <a href="#" class="btnClose">&times;</a>
-    <a href="#">Login</a>
-    <a href="#">Home</a>
-    <a href="#">Settings</a>
-    <a href="#">Help</a>
+    <a href="#" class="btnClose" onclick="closeSlideMenu()">&times;</a>
+    <a href="Login.html">Login</a>
+    <a href="Home.html">Home</a>
+    <a href="Settings.html">Settings</a>
+    <a href="Help.html">Help</a>
     
   </div>
 
   <!--header-->
-  <div id="showcase">
+  <header id="showcase">
     <h1>#Classroom</h1>
     <p>Hi! Welcome to HashtagClassroom</p>
     <a href="AboutUs.html" class="button">About Us</a>
     <a href="Signup.html" class="button">Sign Up</a>
-  </div>
+  </header>
   
-  <!-- <div class="wrapper"> -->
-    <!-- <div class="nav"> -->
-      <!-- <div class="logo"> -->
-        <!-- LOGO -->
-      <!-- </div> -->
-      <!-- <div class="menu"> -->
-        <!-- <ul> -->
-          <!-- <li><a href="Home.html">Home</a></li> -->
-          <!-- <li><a href="#">Bursaries</a></li> -->
-          <!-- <li><a href="Login.html">Login</a></li> -->
-          <!-- <li><a href="Settings.html">Settings</a></li> -->
-          <!-- <li><a href="Help.html"></a>Help</li> -->
-        <!-- </ul> -->
-      <!-- </div> -->
-      <!-- <div class="header"> -->
-        <!-- <h1>#Classroom</h1> -->
-        <!-- <p>Hi! Welcome to HashtagClassroom</p> -->
-      <!-- </div> -->
-      <!-- <br> -->
-      <!-- <a href="AboutUs.html"><button>About Us</button></a> -->
-      <!-- <a href="Signup.html"><button>Sign Up</button></a> -->
-      <!-- <button type="button"> About Us</button> -->
-      <!-- <button type="button"> Sign Up</button> -->
-    <!-- </div> -->
-  <!-- </div> -->
+<!--java script for slidemenu-->
+  <script>
+    function openSlideMenu(){
+      document.getElementById('side-menu').style.width = '250px';
+      document.getElementById('showcase').style.marginLeft = '250px';
+      
+    }
+    function closeSlideMenu(){
+        document.getElementById('side-menu').style.width = '0';
+        document.getElementById('showcase').style.marginLeft = '0';
+    }
+    
+  </script>
+
 </body>
 </html>
 
