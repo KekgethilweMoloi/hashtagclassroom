@@ -122,26 +122,52 @@ body{
   .navbar-nav{display: none;}
 }
 
-/* login and signup */
-#login{
-  background-image: url('../images/background\ image\ \(landing\).jpeg');
+#background {
+  background: url('../images/background\ image\ \(landing\).jpeg');
   background-size: cover;
   background-position: center;
   height: 100vh;
   display: flex;
+}
+
+/* login and signup */
+
+.text, #login{
+  margin-top: 45vh;
+}
+
+
+.text{
+  margin-left: 10%;
+  font-weight: 70px;
+}
+
+.text h1, p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color:#FBFEFB;
+  line-height: 1.6;
+
+}
+.text p a{
+  color: #40434E;
+  text-decoration: none;
+}
+
+#login{
+  margin-left: 20%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0 20px;
-
 }
 
 input{
   display: block;
   width: 320px;
   height: 50px;
-  background: #08070591;
+  background: #b3b6b77c;
   outline: #B3B6B7;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
@@ -149,21 +175,33 @@ input{
   margin-top: 10px;
   border-radius: 5px;
 }
-
-#login .button{
+#login .button, #signup .button{
   font-size: 18px;
   text-decoration: none;
   color: #FBFEFB;
   border: #B3B6B7 2px solid;
   padding: 10px 20px;
   border-radius: 15px;
+  justify-content: space-between;
 }
 
-#login .button:hover{
+#login .button:hover, #signup .button:hover{
   background: #B3B6B7 ;
   color: #FBFEFB;
 
 }
+
+#signup{
+  margin-top: 33%;
+  margin-left: 20%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+
 
 
 /* all style */
