@@ -3,7 +3,7 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-  color:#FBFEFB;
+  color:#080705;
   line-height: 1.6;
 }
 
@@ -11,7 +11,7 @@ body{
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-  color:#D0B8AC;
+  color:#FBFEFB;
   line-height: 1.6;
 }
 
@@ -94,8 +94,10 @@ body{
 }
 
 #showcase h1{
+  color: #FBFEFB;
   font-size: 50px;
   line-height: 1.2;
+
 }
 
 #showcase p{
@@ -123,12 +125,13 @@ body{
 }
 
 #background {
-  background: url('../images/background\ image\ \(landing\).jpeg');
+  background-image: url('../images/background\ image\ \(landing\).jpeg');
   background-size: cover;
   background-position: center;
   height: 100vh;
   display: flex;
 }
+
 
 /* login and signup */
 
@@ -163,6 +166,17 @@ body{
   padding: 0 20px;
 }
 
+#signup{
+  margin-top: 10%;
+  margin-left: 20%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+
 input{
   display: block;
   width: 320px;
@@ -191,15 +205,14 @@ input{
 
 }
 
-#signup{
-  margin-top: 33%;
-  margin-left: 20%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
-}
+/* homepage */
+
+
+
+
+
+
+
 
 
 
