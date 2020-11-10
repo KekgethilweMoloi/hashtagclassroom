@@ -12,7 +12,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   color:#FBFEFB;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /*  #D0B8AC ,#B3B6B7,#080705, #40434E */
@@ -25,7 +25,7 @@ body{
   position: relative;
 }
 
-h1{
+#header h1{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -233,7 +233,6 @@ input{
 
 }
 
-/* homepage */
 
 
 
