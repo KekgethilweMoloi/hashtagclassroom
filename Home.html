@@ -1,55 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page HashtagClassroom</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Home Page HashtagClassroom</title>
+
+
 </head>
 
 <body>
-    
+  <div id="Home">
     <div class="header">
-        <h1>HashtagClassroom</h1>
-        
-      </div>
-      
-      <div class="topnav">
-        <a href="AboutUs.html">About Us</a>
-        <a href="#">Menu</a>
-        <a href="Settings.html">Settings</a>
-        <a href="Help.html" style="float:right">Help</a>
-      </div>
-      
-      <div class="row">
-        <div class="rightcolumn">
-          <div class="card">
-            <h2>TITLE HEADING</h2>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-          </div>
-        </div>
-        <div class="leftcolumn">
-          <div class="card">
-            <h2>Menu</h2>
-            <div class="fakeimg" style="height:100px;">Image</div>
-            <p>Some text ...</p>
-          </div>
-          <div class="card">
-            <h3>Downloads</h3>
-          </div>
-          
-          <div class="card">
-            <h3>Upload</h3>
-          </div>
-        </div>
-      </div>
-      
-      <div class="footer">
-        <h2>Footer</h2>
-      </div>
-      
-    
-</body>
-</html>
+      <h1>HashtagClassroom</h1>
+      <p>Hello, Welcome to your dashboard.</p>
+    </div>
 
+    <!--side menu-->
+    <nav class="navbar">
+      <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+          <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#B3B6B7" stroke-width="5" />
+            <path d="M0,14 30,14" stroke="#B3B6B7" stroke-width="5" />
+            <path d="M0,23 30,23" stroke="#B3B6B7" stroke-width="5" />
+          </svg>
+        </a>
+      </span>
+      <ul class="navbar-nav">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Settings.html">Settings</a></li>
+        <li><a href="Help.html">Home</a></li>
+      </ul>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btnClose" onclick="closeSlideMenu()">&times;</a>
+      <a href="Home.html" class="fa fa-home">Dashboard</a>
+      <a href="#" class="fa fa-user">User</a>
+      <a href="#" class="fa fa-briefcase">Opportunities</a>
+      <a href="#" class="fa fa-folder">Files</a>
+      <a href="#" class="fa fa-power">Logout</a>
+
+    </div>
+    <!--header-->
+    <header id="showcase">
+      <main>
+        <div class="main_container">
+          <div class="main_cards">
+
+            <div class="card1">
+              <i class="fa fa-upload "></i>
+              <p>Uploads</p>
+              <span class="font-bold"><br></span>
+              <div class="inner_card">
+                  <form action="">
+                      <label for="myfile">Select files:</label>
+                      <input type="file" id="myfile" name="myfile" multiple><br><br>
+                      <input type="submit">
+                  </form>
+              </div>
+            </div>
+
+            <div class="card2">
+            <i class="fa fa-briefcase"></i>
+              <h3>Job Opportunities</h3>
+              <span class="font-bold"><br></span>
+              <div class="inner_card">
+                <div class="chart">
+                  <div class="chart_left">
+              
+                          <div id="apex1"></div>
+
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- the code below is supposed to display a donut chart and it's not, I've been trying to get it to
+        work but I'm really struggling -->
+     <script>   
+        var options = {
+            series: [44, 55, 41, 17, 15],
+            chart: {
+            width: 380,
+            type: 'donut',
+          },
+          plotOptions: {
+            pie: {
+              startAngle: -90,
+              endAngle: 270
+            }
+          },
+          dataLabels: {
+            enabled: false
+          },
+          fill: {
+            type: 'gradient',
+          },
+          legend: {
+            formatter: function(val, opts) {
+              return val + " - " + opts.w.globals.series[opts.seriesIndex]
+            }
+          },
+          title: {
+            text: 'Gradient Donut with custom Start-angle'
+          },
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200
+              },
+              legend: {
+                position: 'bottom'
+              }
+            }
+          }]
+          };
+          var chart = new ApexCharts(document.querySelector("#apex1"), options);
+          chart.render();
+        </script>
+      
+    </main>
+     
+      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+      <script src="script.js"></script>
+ </div>
+</body>
+
+</html>
