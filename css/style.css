@@ -65,7 +65,7 @@ body{
   background-color: #D0B8AC;
   color: #FBFEFB;
 }
- 
+
 /* class to apply to scroll */
 .fixed{
   position: fixed;
@@ -208,6 +208,9 @@ body{
 }
 
 
+
+
+
 input{
   display: block;
   width: 320px;
@@ -220,6 +223,7 @@ input{
   margin-top: 10px;
   border-radius: 5px;
 }
+
 #login .button, #signup .button{
   font-size: 18px;
   text-decoration: none;
