@@ -25,8 +25,8 @@ body{
   position: relative;
 }
 
-#header h1, p{
-  /* if you add p then "hello welcome to your dashboard looks a little crazy" but atleast no white gap at top*/
+#header h1{
+  /* if you add p then every p looks crazy but atleast no white gap at top*/
   position: absolute;
   top: 50%;
   left: 50%;
@@ -245,7 +245,7 @@ input{
   font-size: 10px;
   color: #080705ec;
   margin-top: 20;
-  margin-left: 60%;
+  margin-left: 30%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
