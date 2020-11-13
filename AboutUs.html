@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About HashtagClassroom</title>
+    <link rel="stylesheet" href="./css/style.css">
     <style>
         body {
           font-family: Arial, Helvetica, sans-serif;
@@ -77,11 +78,38 @@
         
 </head>
 <body>
+  <header id="header">
+    <h1>HashtagClassroom</h1>
+  </header>
+  
+  <!--side menu-->
+  <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+          <path d="M0,5 30,5" stroke="#B3B6B7" stroke-width="5" />
+          <path d="M0,14 30,14" stroke="#B3B6B7" stroke-width="5" />
+          <path d="M0,23 30,23" stroke="#B3B6B7" stroke-width="5" />
+        </svg>
+      </a>
+    </span>
+    <ul class="navbar-nav">
+    </ul>
+  </nav>
+
+  <div id="side-menu" class="side-nav">
+    <a href="#" class="btnClose" onclick="closeSlideMenu()">&times;</a>
+    <a href="Login.html">Login</a>
+    <a href="Settings.html">Settings</a>
+    <a href="Help.html">Help</a>
+  </div>
+
+  <!--about us section-->
     <div class="about-section">
         <h1>About Us Page</h1>
         <p>Some text about who we are and what we do.</p>
         <p>Resize the browser window to see that this page is responsive by the way.</p>
-      </div>
+    </div>
       
       <h2 style="text-align:center">Our Team</h2>
       <div class="row">
@@ -149,6 +177,19 @@
               </div>
             </div>
           </div>
-      </div>
+
+<!--java script for slidemenu-->
+  <script>
+    function openSlideMenu() {
+      document.getElementById('side-menu').style.width = '250px';
+      document.getElementById('showcase').style.marginLeft = '250px';
+
+    }
+    function closeSlideMenu() {
+      document.getElementById('side-menu').style.width = '0';
+      document.getElementById('showcase').style.marginLeft = '0';
+    }
+    </script>
+</div>
 </body>
 </html>
