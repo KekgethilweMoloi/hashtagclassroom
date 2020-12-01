@@ -8,6 +8,41 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <!--Header-->
+    <header>
+        <a href="LandingPage.html" class="logo">
+            <h1>Hashtag.</h1>
+        </a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="Login.html" onclick="toggleMenu();">login</a></li>
+            <li><a href="Help.html" onclick="toggleMenu();">help</a></li>
+        </ul>
+    
+    </header>
+
+    <!--settings-->
+    <section class="settings">
+        <div class="settingsBx">
+            <h2>settings</h2>
+            <p>This is where our setting are</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus porro, cum repudiandae enim, eaque eius in deserunt natus consequuntur debitis rerum, quo vero. Voluptatibus repudiandae omnis, nisi rem assumenda deserunt!</p>
+        </div>
+    </section>
+
+    <!--js-->
+    <script type="text/javascript">
+        window.addEventListener('scroll', function () {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
     
 </body>
 </html>
