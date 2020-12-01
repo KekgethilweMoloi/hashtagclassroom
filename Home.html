@@ -23,14 +23,16 @@
       <ul class="menu">
         <li><a href="Home.html" onclick="toggleMenu();">home</a></li>
         <li><a href="#" onclick="toggleMenu();">upload</a></li>
-        <li class="sub-menu"><a href="#" onclick="toggleMenu();">opportunities</a>
-          <ul>
-            <li><a href="#" onclick="toggleMenu();">apprenticeships</a></li>
-            <li><a href="#" onclick="toggleMenu();">bursaries</a></li>
-            <li><a href="#" onclick="toggleMenu();">graduate programmes</a></li>
-            <li><a href="#" onclick="toggleMenu();">internships</a></li>
-            <li><a href="#" onclick="toggleMenu();">learnerships</a></li>
-          </ul>
+        <li><a href="#" onclick="toggleMenu();">opportunities</a>
+          <div class="sub-menu">
+            <ul>
+              <li><a href="#" onclick="toggleMenu();">apprenticeships</a></li>
+              <li><a href="#" onclick="toggleMenu();">bursaries</a></li>
+              <li><a href="#" onclick="toggleMenu();">graduate programmes</a></li>
+              <li><a href="#" onclick="toggleMenu();">internships</a></li>
+              <li><a href="#" onclick="toggleMenu();">learnerships</a></li>
+            </ul>
+          </div>
         </li>
         <li><a href="Login.html" onclick="toggleMenu();">logout</a></li>
       </ul>
@@ -57,11 +59,6 @@
       menu.classList.toggle('active');
     }
 
-    $(document).ready(function(){
-      $('ul li').click(function(){
-        $(this).toggleClass('active');
-      })
-    })
   </script>
 
 </body>
