@@ -108,23 +108,38 @@ header.sticky ul li a
   color: #40434e
 }
 
-.sub-menu
+header ul ul
 {
+  position: relative;
   display: none;
-}
-header ul li:hover .sub-menu
-{
-  display: block;
-  position: absolute;
-  margin-top: 15px;
-  margin-left: -15px;
+  padding-top: 2px;
 }
 
-header ul li:hover .sub-menu ul
+header ul li:hover ul
 {
+  position: absolute;
   display: block;
-  margin: 10px;
+  padding-top: 2px;
 }
+/* .sub-menu */
+/* { */
+  /* display: none; */
+/* } */
+/* header ul li:hover .sub-menu */
+/* { */
+  /* display: block; */
+  /* position: absolute; */
+  /* margin-top: 15px; */
+  /* margin-left: -15px; */
+/* } */
+/*  */
+/* header ul li:hover .sub-menu ul */
+/* { */
+  /* display: block; */
+  /* margin: 10px; */
+/* } */
+/*  */
+
 /*About*/
 
 .about
@@ -505,6 +520,12 @@ header ul li:hover .sub-menu ul
     position: relative;
 
   }
+
+  header nav ul li ul li
+  {
+    width: 100%
+  }
+  
 
 }
 @media (max-width: 600px)
