@@ -152,8 +152,8 @@ header.sticky ul li a
   color:#b3b6b7 ;
 }
 
-/*login*/
-.login
+/*login and signup*/
+.login , .signup
 {
   
   position: relative;
@@ -167,7 +167,7 @@ header.sticky ul li a
 
 }
 
-.login .content .new
+.login .content .new , .signup .content .new
 {
   margin-top: 20%;
   flex-direction: row; 
@@ -178,7 +178,7 @@ header.sticky ul li a
   
 }
 
-.login .content .new h2
+.login .content .new h2 , .signup .content .new h2
 {
   font-size: 3em;
   color: #b3b6b7;
@@ -187,25 +187,25 @@ header.sticky ul li a
 
 }
 
-.login .content .new p
+.login .content .new p , .signup .content .new p
 {
   font-size: 20px; 
   color:#40434e; 
   line-height: 1.6;
 
 }
-.login .content .new a
+.login .content .new a , .signup .content .new a
 {
   text-decoration: none;
   color: #b3b6b7;
 }
-.login .content .new a:hover
+.login .content .new a:hover , .signup .content .new a:hover
 {
   color: azure;
 }
 
 
-.login .content input{ 
+.login .content input , .signup .content input{ 
   align-items: center; 
   display: block; 
   width: 320px; 
@@ -218,7 +218,7 @@ header.sticky ul li a
   border-radius: 5px;
 } 
 
-.login .content .button{ 
+.login .content .button , .signup .content .button{ 
   font-size: 18px; 
   text-decoration: none; 
   color: #FBFEFB; 
@@ -227,8 +227,8 @@ header.sticky ul li a
   border-radius: 15px; 
   justify-content: space-between; 
 } 
- 
-.login .content .button:hover{
+
+.login .content .button:hover , .signup .content .button:hover{
   background: #B3B6B7;
   color: #FBFEFB; 
 } 
