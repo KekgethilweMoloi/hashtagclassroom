@@ -7,147 +7,62 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
-  <title>Home Page HashtagClassroom</title>
+  <title>Home HashtagClassroom</title>
 
 
 </head>
 
 <body>
-    <header id="header">
-      <h1>HashtagClassroom</h1>
-    </header>
+    <!--nav-->
+  <header>
+    <a href="#" class="logo">
+      <h1>Hashtag.</h1>
+    </a>
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <nav>
+      <ul class="menu">
+        <li><a href="Home.html" onclick="toggleMenu();">home</a></li>
+        <li><a href="#" onclick="toggleMenu();">upload</a></li>
+        <li class="sub-menu"><a href="#" onclick="toggleMenu();">opportunities</a>
+          <ul>
+            <li><a href="#" onclick="toggleMenu();">apprenticeships</a></li>
+            <li><a href="#" onclick="toggleMenu();">bursaries</a></li>
+            <li><a href="#" onclick="toggleMenu();">graduate programmes</a></li>
+            <li><a href="#" onclick="toggleMenu();">internships</a></li>
+            <li><a href="#" onclick="toggleMenu();">learnerships</a></li>
+          </ul>
+        </li>
+        <li><a href="Login.html" onclick="toggleMenu();">logout</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!--side menu-->
-  <nav class="navbar">
-    <span class="open-slide">
-      <a href="#" onclick="openSlideMenu()">
-        <svg width="30" height="30">
-          <path d="M0,5 30,5" stroke="#B3B6B7" stroke-width="5" />
-          <path d="M0,14 30,14" stroke="#B3B6B7" stroke-width="5" />
-          <path d="M0,23 30,23" stroke="#B3B6B7" stroke-width="5" />
-        </svg>
-      </a>
-    </span>
-    <ul class="navbar-nav">
-      <li><input type="text" id="search" placeholder="what are you looking for" ></li>
-    </ul>
-  </nav>
-
-  <div id="Home">
-    <div class="header">
-      <p>Hello, Welcome to your dashboard.</p>
+  <!--display-->
+  <section class="display">
+    <div class="displayBx">
+      <h2>display stuff here, change this</h2>
     </div>
-  </div>
+  </section>
 
+  <!--js-->
+  <script type="text/javascript">
+    window.addEventListener('scroll', function () {
+      var header = document.querySelector('header');
+      header.classList.toggle('sticky', window.scrollY > 0);
+    });
+    function toggleMenu() {
+      var menuToggle = document.querySelector('.toggle');
+      var menu = document.querySelector('.menu');
+      menuToggle.classList.toggle('active');
+      menu.classList.toggle('active');
+    }
 
-  <div id="side-menu" class="side-nav">
-    <a href="#" class="btnClose" onclick="closeSlideMenu()">&times;</a>
-    <a href="Home.html" class="fa fa-home"> Dashboard</a>
-    <a href="#" class="fa fa-user">  User</a>
-    <a href="#" class="fa fa-briefcase">  Opportunities</a>
-    <a href="#" class="fa fa-folder">  Files</a>
-    <a href="Settings.html" class="fa fa-gear"> Settings</a>
-    <a href="Help.html" class="fa fa-question-circle">  Help</a>
-    <a href="Login.html" class="fa fa-power-off">  Logout</a>
-  </div>
-
-<!--java script for slidemenu-->
-  <script>
-      function openSlideMenu() {
-      document.getElementById('side-menu').style.width = '250px';
-      document.getElementById('showcase').style.marginLeft = '250px';
-      }
-      function closeSlideMenu() {
-      document.getElementById('side-menu').style.width = '0';
-      document.getElementById('showcase').style.marginLeft = '0';
-      }
+    $(document).ready(function(){
+      $('ul li').click(function(){
+        $(this).toggleClass('active');
+      })
+    })
   </script>
-
-<!--header-->
-
-    <header id="showcase">
-      <main>
-        <div class="main_container">
-          <div class="main_cards">
-
-            <div class="card1">
-              <i class="fa fa-upload "></i>
-              <p>Uploads</p>
-              <span class="font-bold"><br></span>
-              <div class="inner_card">
-                  <form action="">
-                      <label for="myfile">Select files:</label>
-                      <input type="file" id="myfile" name="myfile" multiple><br><br>
-                      <input type="submit">
-                  </form>
-              </div>
-            </div>
-
-            <div class="card2">
-            <i class="fa fa-briefcase"></i>
-              <h3>Job Opportunities</h3>
-              <span class="font-bold"><br></span>
-              <div class="inner_card">
-                <div class="chart">
-                  <div class="chart_left">
-                          <div id="apex1"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-        <!-- the code below is supposed to display a donut chart and it's not, I've been trying to get it to
-        work but I'm really struggling -->
-        <script>   
-          var options = {
-              series: [44, 55, 41, 17, 15],
-              chart: {
-              width: 380,
-              type: 'donut',
-            },
-            plotOptions: {
-              pie: {
-                startAngle: -90,
-                endAngle: 270
-              }
-            },
-            dataLabels: {
-              enabled: false
-            },
-            fill: {
-              type: 'gradient',
-            },
-            legend: {
-              formatter: function(val, opts) {
-                return val + " - " + opts.w.globals.series[opts.seriesIndex]
-              }
-            },
-            title: {
-              text: 'Gradient Donut with custom Start-angle'
-            },
-            responsive: [{
-              breakpoint: 480,
-              options: {
-                chart: {
-                width: 200
-                },
-                legend: {
-                  position: 'bottom'
-                }
-              }
-            }]
-            };
-            var chart = new ApexCharts(document.querySelector("#apex1"), options);
-            chart.render();
-          </script>
-      </main>
-      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-      <script src="script.js"></script>
-    </header>
 
 </body>
 </html>
