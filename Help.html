@@ -8,31 +8,41 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header id="header">
-        <h1>HashtagClassroom</h1>
-    </header>
-    
-    <!--side menu-->
-    <nav class="navbar">
-        <span class="open-slide">
-            <a href="#" onclick="openSlideMenu()">
-                <svg width="30" height="30">
-                    <path d="M0,5 30,5" stroke="#B3B6B7" stroke-width="5" />
-                    <path d="M0,14 30,14" stroke="#B3B6B7" stroke-width="5" />
-                    <path d="M0,23 30,23" stroke="#B3B6B7" stroke-width="5" />
-                </svg>
-            </a>
-        </span>
-        <ul class="navbar-nav">
+    <!--Header-->
+    <header>
+        <a href="LandingPage.html" class="logo">
+            <h1>Hashtag.</h1>
+        </a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="Login.html" onclick="toggleMenu();">login</a></li>
+            <li><a href="Settings.html" onclick="toggleMenu();">settings</a></li>
         </ul>
-    </nav>
-    <div id="side-menu" class="side-nav">
-        <a href="#" class="btnClose" onclick="closeSlideMenu()">&times;</a>
-        <a href="Settings.html" class="fa fa-gear">
-            Settings</a>
-        <a href="Login.html" class="fa fa-power-off">
-        Logout</a>
-    </div>
+    
+    </header>
+
+    <!--settings-->
+    <section class="help">
+        <div class="helpBx">
+            <h2>help</h2>
+            <p>This is where our help section is</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus porro, cum repudiandae enim, eaque eius</p>
+        </div>
+    </section>
+
+    <!--js-->
+    <script type="text/javascript">
+        window.addEventListener('scroll', function () {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
 
 
     

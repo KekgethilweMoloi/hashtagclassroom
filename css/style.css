@@ -254,6 +254,28 @@ header.sticky ul li a
   line-height: 1.5em;
 }
 
+/*help*/
+.help
+{
+  position: relative;
+  min-height: 100vh;
+  background: url(/images/background.jpeg);
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.help .helpBx h2
+{
+  font-size: 3em;
+  color: #b3b6b7;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+
 /*login and signup*/
 
 /* .text, #login{ */
