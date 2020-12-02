@@ -521,11 +521,30 @@ header ul li:hover ul
 
   }
 
-  header nav ul li ul li
+  header nav ul ul 
   {
     width: 100%
   }
+
+  header ul ul
+  {
+    position: relative;
+    display: none;
+    padding-top: 2px;
+    width: 100%
+    
+  }
+
   
+  
+  
+  
+  
+  
+  
+
+
+
 
 }
 @media (max-width: 600px)
